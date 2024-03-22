@@ -2,22 +2,21 @@
 
 int main() {
 
-    double n1, n2, media;
+    int x, a = 0, g = 0, d = 0;
 
-    scanf("%lf", &n1);
-    while (n1 < 0 || n1 > 10) {
-        printf("nota invalida\n");
-        scanf("%lf", &n1);
-    }
+    do {
+        scanf("%d", &x);
 
-    scanf("%lf", &n2);
-    while (n2 < 0 || n2 > 10) {
-        printf("nota invalida\n");
-        scanf("%lf", &n2);
-    }
+        if (x == 1) a++;
+        if (x == 2) g++;
+        if (x == 3) d++;
 
-    media = (n1 + n2) / 2;
-    printf("media = %.2lf\n", media);
+    } while (x != 4);
+
+    printf("MUITO OBRIGADO\n");
+    printf("Alcool: %d\n", a);
+    printf("Gasolina: %d\n", g);
+    printf("Diesel: %d\n", d);
 
     return 0;
 }
