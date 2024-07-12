@@ -1,29 +1,29 @@
 #include<stdio.h>
 
 int main() {
-    int n, m, i, f;
+
+    int n, m, x, q = 0;
     scanf("%d", &n);
 
-    int v[n + 1];
-    for (i = 0; i <= n; i++) {
-        v[i] = 0;
+    int a[n + 1];
+    for (int i = 0; i <= n; i++) {
+        a[i] = 0;
     }
 
     scanf("%d", &m);
-    for (i = 0; i < m; i++) {
-        scanf("%d", &f);
-        v[f]++;
+
+    for (int i = 0; i < m; i++) {
+        scanf("%d", &x);
+        a[x]++;
     }
 
-    int t = 0;
-    for (i = 0; i <= n; i++) {
-        //printf("%d ", v[i]);
-        if (v[i] > 0) {
-            t++;
+    for (int i = 0; i <= n; i++) {
+        if (a[i] > 0) {
+            q++;
         }
     }
 
-    printf("%d\n", n - t);
+    printf("%d\n", n - q);
 
     return 0;
 }

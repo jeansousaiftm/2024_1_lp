@@ -2,32 +2,32 @@
 
 int main() {
 
-    int a, v, i, x, y, t = 1;
+    int a, v, x, y, t = 1;
 
     while (scanf("%d %d", &a, &v) && a + v > 0) {
-
-        int n[a + 1], maximo = 0;
-
-        for (i = 0; i <= a; i++) {
-            n[i] = 0;
+        int q[a + 1];
+        int maior = 0;
+        for (int i = 0; i <= a; i++) {
+            q[i] = 0;
         }
-
-        for (i = 0; i < v; i++) {
+        for (int i = 0; i < v; i++) {
             scanf("%d %d", &x, &y);
-            n[x]++;
-            n[y]++;
-            if (n[x] > maximo) maximo = n[x];
-            if (n[y] > maximo) maximo = n[y];
+            q[x]++;
+            q[y]++;
+            if (q[x] > maior) {
+                maior = q[x];
+            }
+            if (q[y] > maior) {
+                maior = q[y];
+            }
         }
-
         printf("Teste %d\n", t++);
-        for (i = 0; i <= a; i++) {
-            if (n[i] == maximo) {
+        for (int i = 1; i <= a; i++) {
+            if (q[i] == maior) {
                 printf("%d ", i);
             }
         }
         printf("\n\n");
-
     }
 
     return 0;

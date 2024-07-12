@@ -1,10 +1,11 @@
 #include<stdio.h>
 
 int main() {
-    int a, b;
 
-    while (scanf("%d %d", &a, &b) && a + b > 0) {
-        printf("%d\n", a + b);
+    int e, d;
+
+    while (scanf("%d %d", &e, &d) && e + d > 0) {
+        printf("%d\n", e + d);
     }
 
     return 0;
